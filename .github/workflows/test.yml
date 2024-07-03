@@ -53,6 +53,9 @@ jobs:
           name: coverage-data-${{ matrix.python-version }}
           path: '${{ github.workspace }}/.coverage*'
 
+      - name: Check migrations
+        run: python manage.py makemigrations --check
+
   coverage:
     name: Coverage
     runs-on: ubuntu-22.04
