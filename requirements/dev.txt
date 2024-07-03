@@ -7,3 +7,6 @@
 importlib-metadata<5.0; python_version <= '3.7'
 coverage
 factory-boy>=3.1.0
+
+# So that we can test async celery tasks.
+redis>=5.0
